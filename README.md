@@ -6,6 +6,8 @@ This template was initialized with `expo-cli` and i choose `yarn` as package man
 - vscode shareable settings file - `.vscode/settings.json`
 - `jest` & `jest-expo` configurations for typescript
 - `husky` - **Git Hooks** with [jest](https://jestjs.io/docs/getting-started) test as pre-commit hook and [git-cz](https://github.com/streamich/git-cz) for preparing commit message
+- `dontenv` & `expo-constants` for environment variable usage
+- example file of `.env`
 
 ## Available Scripts
 
@@ -17,7 +19,7 @@ Runs `expo start` command
 
 ### `yarn test`
 
-Runs jest test
+Runs jest test, use command `yarn test -u` to update snapshot
 
 ### `yarn prepare`
 
@@ -100,3 +102,24 @@ Commands and steps are:
   ```sh
   yarn prepare
   ```
+- install `dotenv` and `expo-constants`
+  ```sh
+  yarn add dotenv expo-constants
+  ```
+- change file `app.json` to `app.config.ts`
+- import `dotenv/config` and add new key `extra` in `app.config.ts` for environment variable usage
+
+  ```ts
+  import "dotenv/config";
+
+  export default {
+    expo: {
+      // other configs...
+      extra: {
+        APP_NAME: process.env.APP_NAME || ""
+      }
+    }
+  };
+  ```
+
+- create `.env` file and `.env.example`

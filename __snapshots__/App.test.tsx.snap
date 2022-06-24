@@ -11,8 +11,13 @@ exports[`<App /> renders correctly 1`] = `
     }
   }
 >
-  <Text>
-    Open up App.tsx to start working on your app!
-  </Text>
+  <View>
+    <Text>
+      Kao Expo Typescript Template
+    </Text>
+    <Text>
+      Open up App.tsx to start working on your app!
+    </Text>
+  </View>
 </View>
 `;
