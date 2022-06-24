@@ -4,6 +4,8 @@ This template was initialized with `expo-cli` and i choose `yarn` as package man
 
 - `prettier` - **Code Formatter** that configured by `.prettierrc` file
 - vscode shareable settings file - `.vscode/settings.json`
+- `jest` & `jest-expo` configurations for typescript
+- `husky` - **Git Hooks** with [jest](https://jestjs.io/docs/getting-started) test as pre-commit hook and [git-cz](https://github.com/streamich/git-cz) for preparing commit message
 
 ## Available Scripts
 
@@ -55,3 +57,38 @@ Commands and steps are:
   yarn add react-test-renderer@17.0.2 @types/react-test-renderer@17.0.2
   ```
 - create a single test file `App.test.tsx`
+- install `husky` as Git Hooks
+  ```sh
+  yarn add husky
+  ```
+- setup `yarn prepare` command to install husky hooks
+  ```json
+  {
+    "scripts": {
+      // other scripts...
+      "prepare": "husky install"
+    }
+  }
+  ```
+- create husky Git Hooks file `.husky/pre-commit` and add `yarn test` command in it
+
+  ```sh
+  #!/usr/bin/env sh
+  . "$(dirname -- "$0")/_/husky.sh"
+
+  yarn test
+  ```
+
+- create husky Git Hooks for preparing commit message using [git-cz](https://github.com/streamich/git-cz) in file `.husky/prepare-commit-msg`
+
+  ```sh
+  #!/usr/bin/env sh
+  . "$(dirname -- "$0")/_/husky.sh"
+
+  exec < /dev/tty && npx git-cz --hook
+  ```
+
+- install git hooks
+  ```sh
+  yarn prepare
+  ```
