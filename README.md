@@ -13,7 +13,15 @@ In the project directory, you can run:
 
 ### `yarn start`
 
-Runs `expo start` command.
+Runs `expo start` command
+
+### `yarn test`
+
+Runs jest test
+
+### `yarn prepare`
+
+Runs `husky install` command to install new / updated Git Hooks in folder `.husky/*`
 
 ### commands and steps i used to setup this template
 
