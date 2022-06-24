@@ -24,7 +24,34 @@ Before initializing this template, i'm using:
 
 Commands and steps are:
 
-- run expo init command\
-  `expo init kao-expo-typescript-template --typescript --yarn`
+- run expo init command
+  ```sh
+  expo init kao-expo-typescript-template --typescript --yarn
+  ```
 - setup prettier config file `.prettierrc`
 - setup vscode config file `.vscode/settings.json`
+- install testing framework `jest` by `expo-cli`.
+  **It's important** for using `expo install` and not `yarn add` to install the compatible version of jest-expo for the project
+  ```sh
+  expo install jest jest-expo
+  yarn add @types/jest
+  ```
+- setup `jest` configuration in `package.json`
+  ```json
+  {
+    "scripts": {
+      // other scripts...
+      "test": "jest"
+    },
+    "jest": {
+      "preset": "jest-expo",
+      "moduleFileExtensions": ["ts", "tsx", "js", "json", "jsx", "node"]
+    }
+  }
+  ```
+- install `react-test-renderer` so i can render app / component in the testing files.
+  **It's important** to install the same version of `react-test-renderer` with `react` version
+  ```sh
+  yarn add react-test-renderer@17.0.2 @types/react-test-renderer@17.0.2
+  ```
+- create a single test file `App.test.tsx`
