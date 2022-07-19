@@ -1,4 +1,4 @@
-# Documentations
+# Developer Notes
 
 ## Global dependencies
 
@@ -96,15 +96,11 @@
   ```
 
 - create `.env` file and `.env.example`
-- install @react-navigation/native
+- install navigators and its compatible dependencies using expo-cli
   ```sh
   yarn add @react-navigation/native
-  ```
-- install compatible dependencies used by navigators
-  ```sh
-  expo install react-native-screens react-native-safe-area-context
-  ```
-- install native stack navigator library
-  ```sh
   yarn add @react-navigation/native-stack
+  expo install react-native-screens react-native-safe-area-context
+  expo install react-native-gesture-handler
   ```
+-
