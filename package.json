@@ -9,7 +9,10 @@
     "web": "expo start --web",
     "eject": "expo eject",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "test:clearCache": "jest --clearCache",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll"
   },
   "jest": {
     "preset": "jest-expo",
@@ -20,6 +23,9 @@
       "json",
       "jsx",
       "node"
+    ],
+    "setupFiles": [
+      "./jest.setup.ts"
     ]
   },
   "dependencies": {
