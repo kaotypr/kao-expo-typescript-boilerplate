@@ -2,8 +2,8 @@ import "dotenv/config";
 
 export default {
   expo: {
-    name: "kao-expo-typescript-template",
-    slug: "kao-expo-typescript-template",
+    name: "kao-expo-typescript-boilerplate",
+    slug: "kao-expo-typescript-boilerplate",
     version: "1.0.0",
     orientation: "portrait",
     icon: "./assets/icon.png",

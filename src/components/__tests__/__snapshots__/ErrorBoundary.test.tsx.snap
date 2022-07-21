@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/ErrorBoundary renders correctly 1`] = `
+<View
+  testID="error-boundary-root"
+>
+  <Text
+    style={
+      Object {
+        "fontSize": 24,
+        "fontWeight": "bold",
+        "textAlign": "center",
+      }
+    }
+  >
+    Oops Something Went Wrong!
+  </Text>
+</View>
+`;

@@ -1,0 +1,57 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["universe/native", "prettier"],
+  "plugins": ["import"],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "import/order": [
+      "warn",
+      {
+        "pathGroups": [
+          {
+            "pattern": "@@types/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@assets/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@components/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@contexts/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@hooks/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@navigations/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@screens/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@services/**",
+            "group": "internal"
+          },
+          {
+            "pattern": "@styles/**",
+            "group": "internal"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin"],
+        "groups": [["builtin", "external"], "internal", ["parent", "sibling", "index"], "unknown"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ]
+  }
+}

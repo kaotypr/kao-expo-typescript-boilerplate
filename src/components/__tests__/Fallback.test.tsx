@@ -1,15 +1,14 @@
-import React from "react";
 import { create } from "react-test-renderer";
 
-import App from "./App";
+import Fallback from "@components/Fallback";
 
-describe("<App />", () => {
+describe("components/Fallback", () => {
   it("renders correctly", () => {
-    const tree = create(<App />).toJSON();
+    const tree = create(<Fallback />).toJSON();
     expect(tree).toMatchSnapshot();
   });
   it("has 1 child", () => {
-    const tree: any = create(<App />).toJSON();
+    const tree: any = create(<Fallback />).toJSON();
     expect(tree.children.length).toBe(1);
   });
 });
