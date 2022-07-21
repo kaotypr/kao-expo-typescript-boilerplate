@@ -1,0 +1,6 @@
+# Ignore artifacts:
+build
+.expo
+
+# Ignore all HTML files:
+*.md
