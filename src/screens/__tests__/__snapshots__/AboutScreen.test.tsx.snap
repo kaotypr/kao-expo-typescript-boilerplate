@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screens/AboutScreen should match snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "#919ff0",
+      },
+    ]
+  }
+>
+  <View>
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#232323",
+          },
+        ]
+      }
+    >
+      About Screen
+    </Text>
+    <Text>
+      {
+  "APP_NAME": "Kao Expo Typescript Boilerplate",
+  "APP_ENV": "development"
+}
+    </Text>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#434343",
+            "textAlign": "center",
+          }
+        }
+      >
+        back to home screen ?
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;

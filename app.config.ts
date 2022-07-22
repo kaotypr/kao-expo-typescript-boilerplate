@@ -30,7 +30,8 @@ export default {
       favicon: "./assets/favicon.png"
     },
     extra: {
-      APP_NAME: process.env.APP_NAME || ""
+      APP_NAME: process.env.APP_NAME || "",
+      APP_ENV: process.env.APP_ENV || ""
     }
   }
 };

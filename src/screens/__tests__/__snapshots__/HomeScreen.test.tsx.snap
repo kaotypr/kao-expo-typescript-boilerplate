@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`screens/HomeScreen should match snapshot 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Array [
+      Object {
+        "alignItems": "center",
+        "flex": 1,
+        "justifyContent": "center",
+      },
+      Object {
+        "backgroundColor": "#232323",
+      },
+    ]
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingHorizontal": 5,
+      }
+    }
+  >
+    <Text
+      style={
+        Array [
+          Object {
+            "fontSize": 30,
+            "fontWeight": "bold",
+            "textAlign": "center",
+          },
+          Object {
+            "color": "#919ff0",
+          },
+        ]
+      }
+    >
+      Home Screen
+    </Text>
+    <View
+      accessible={true}
+      collapsable={false}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "#eee",
+            "textAlign": "center",
+          }
+        }
+      >
+        see about screen ?
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
