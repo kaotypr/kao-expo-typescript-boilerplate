@@ -45,10 +45,10 @@ exports[`App should match snapshot 1`] = `
         color="rgb(0, 122, 255)"
         direction="ltr"
         disableBackButtonMenu={false}
-        hidden={false}
+        hidden={true}
         hideBackButton={false}
         largeTitleHideShadow={false}
-        title="Kao Expo Typescript Boilerplate"
+        title="Home"
         titleColor="rgb(28, 28, 30)"
         topInsetEnabled={false}
         translucent={false}
@@ -66,59 +66,74 @@ exports[`App should match snapshot 1`] = `
           ]
         }
       >
-        <View>
-          <Text
-            style={
+        <RCTSafeAreaView
+          emulateUnlessSupported={true}
+          style={
+            Array [
               Object {
-                "fontSize": 30,
-                "fontWeight": "bold",
-              }
-            }
-          >
-            Home Screen
-          </Text>
+                "alignItems": "center",
+                "flex": 1,
+                "justifyContent": "center",
+              },
+              Object {
+                "backgroundColor": "#232323",
+              },
+            ]
+          }
+        >
           <View
-            accessibilityRole="button"
-            accessible={true}
-            collapsable={false}
-            focusable={true}
-            onClick={[Function]}
-            onResponderGrant={[Function]}
-            onResponderMove={[Function]}
-            onResponderRelease={[Function]}
-            onResponderTerminate={[Function]}
-            onResponderTerminationRequest={[Function]}
-            onStartShouldSetResponder={[Function]}
             style={
               Object {
-                "opacity": 1,
+                "paddingHorizontal": 5,
               }
             }
           >
-            <View
+            <Text
               style={
                 Array [
-                  Object {},
+                  Object {
+                    "fontSize": 30,
+                    "fontWeight": "bold",
+                    "textAlign": "center",
+                  },
+                  Object {
+                    "color": "#919ff0",
+                  },
                 ]
+              }
+            >
+              Home Screen
+            </Text>
+            <View
+              accessible={true}
+              collapsable={false}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
               }
             >
               <Text
                 style={
-                  Array [
-                    Object {
-                      "color": "#007AFF",
-                      "fontSize": 18,
-                      "margin": 8,
-                      "textAlign": "center",
-                    },
-                  ]
+                  Object {
+                    "color": "#eee",
+                    "textAlign": "center",
+                  }
                 }
               >
-                About
+                see about screen ?
               </Text>
             </View>
           </View>
-        </View>
+        </RCTSafeAreaView>
       </View>
     </RNSScreen>
   </RNSScreenStack>

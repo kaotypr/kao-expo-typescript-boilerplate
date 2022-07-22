@@ -4,6 +4,16 @@
   "plugins": ["import"],
   "rules": {
     "@typescript-eslint/no-unused-vars": ["error"],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true
+      }
+    ],
     "import/order": [
       "warn",
       {
