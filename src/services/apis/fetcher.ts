@@ -47,7 +47,9 @@ class Fetcher {
   delete = async (path: string, data?: BodyInit): Promise<any> => {
     try {
       const url = `${this.#baseUrl}${path}`;
-      return fetch(url, { ...this.#config, method: "DELETE", body: data }).then((res) => res.json());
+      return fetch(url, { ...this.#config, method: "DELETE", body: data }).then((res) =>
+        res.json()
+      );
     } catch (error) {
       return Promise.reject(error);
     }
