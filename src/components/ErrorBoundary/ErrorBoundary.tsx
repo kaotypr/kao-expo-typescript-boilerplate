@@ -41,7 +41,9 @@ class ErrorBoundary extends PureComponent<IProps, IState> {
     if (hasError) {
       return (
         <View testID="error-boundary-root">
-          <Text style={{ fontSize: 24, fontWeight: "bold", textAlign: "center" }}>Oops Something Went Wrong!</Text>
+          <Text style={{ fontSize: 24, fontWeight: "bold", textAlign: "center" }}>
+            Oops Something Went Wrong!
+          </Text>
         </View>
       );
     }
