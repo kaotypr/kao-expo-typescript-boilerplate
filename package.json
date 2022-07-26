@@ -11,7 +11,7 @@
     "prepare": "husky install",
     "test": "jest",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
-    "test:update": "jest --update",
+    "test:update": "jest --u",
     "test:clearCache": "jest --clearCache",
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watchAll"
