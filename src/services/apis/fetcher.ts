@@ -4,7 +4,9 @@ class Fetcher {
 
   constructor(baseUrl: string = "", config: Partial<RequestInit> = {}) {
     this.#baseUrl = baseUrl;
-    this.#config = config;
+    const { headers: passedHeaders } = config;
+    const headers = { "Content-Type": "application/json", ...passedHeaders };
+    this.#config = { headers, ...config };
   }
 
   get = async (path: string, params?: { [keys: string]: any }): Promise<any> => {
@@ -17,38 +19,44 @@ class Fetcher {
     }
   };
 
-  post = async (path: string, data?: BodyInit): Promise<any> => {
+  post = async (path: string, data?: object): Promise<any> => {
     try {
       const url = `${this.#baseUrl}${path}`;
-      return fetch(url, { ...this.#config, method: "POST", body: data }).then((res) => res.json());
+      return fetch(url, { ...this.#config, method: "POST", body: JSON.stringify(data) }).then(
+        (res) => res.json()
+      );
     } catch (error) {
       return Promise.reject(error);
     }
   };
 
-  put = async (path: string, data?: BodyInit): Promise<any> => {
+  put = async (path: string, data?: object): Promise<any> => {
     try {
       const url = `${this.#baseUrl}${path}`;
-      return fetch(url, { ...this.#config, method: "PUT", body: data }).then((res) => res.json());
+      return fetch(url, { ...this.#config, method: "PUT", body: JSON.stringify(data) }).then(
+        (res) => res.json()
+      );
     } catch (error) {
       return Promise.reject(error);
     }
   };
 
-  patch = async (path: string, data?: BodyInit): Promise<any> => {
+  patch = async (path: string, data?: object): Promise<any> => {
     try {
       const url = `${this.#baseUrl}${path}`;
-      return fetch(url, { ...this.#config, method: "PATCH", body: data }).then((res) => res.json());
+      return fetch(url, { ...this.#config, method: "PATCH", body: JSON.stringify(data) }).then(
+        (res) => res.json()
+      );
     } catch (error) {
       return Promise.reject(error);
     }
   };
 
-  delete = async (path: string, data?: BodyInit): Promise<any> => {
+  delete = async (path: string, data?: object): Promise<any> => {
     try {
       const url = `${this.#baseUrl}${path}`;
-      return fetch(url, { ...this.#config, method: "DELETE", body: data }).then((res) =>
-        res.json()
+      return fetch(url, { ...this.#config, method: "DELETE", body: JSON.stringify(data) }).then(
+        (res) => res.json()
       );
     } catch (error) {
       return Promise.reject(error);
